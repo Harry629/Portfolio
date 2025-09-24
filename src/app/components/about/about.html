@@ -1,0 +1,28 @@
+<div class="about-section">
+  <div class="container">
+    <div class="about-content">
+      <div class="about-text">
+        <h2 class="section-title">About Me</h2>
+        <h1 class="about-name">{{aboutData.name}}</h1>
+        <h3 class="about-title">{{aboutData.title}}</h3>
+        <p class="about-description">{{aboutData.description}}</p>
+        
+        <div class="skills-preview">
+          <h4>Key Skills:</h4>
+          <div class="skill-tags">
+            <span class="skill-tag" *ngFor="let skill of aboutData.skills">{{skill}}</span>
+          </div>
+        </div>
+        
+        <div class="about-actions">
+          <button class="btn btn-primary" (click)="onScrollToSection('contact')">Say Hi!</button>
+          <button class="btn btn-secondary" (click)="onScrollToSection('projects')">View My Work</button>
+        </div>
+      </div>
+      
+      <div class="about-image">
+        <img [src]="aboutData.image" [alt]="aboutData.name" class="profile-image">
+      </div>
+    </div>
+  </div>
+</div>

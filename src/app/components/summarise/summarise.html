@@ -1,0 +1,16 @@
+<div class="summarise-section">
+  <div class="container">
+    <h2 class="section-title">{{summary.title}}</h2>
+    <div class="summary-content">
+      <div class="summary-text">
+        <p class="summary-description">{{summary.content}}</p>
+      </div>
+      <div class="summary-highlights">
+        <h3>Key Highlights:</h3>
+        <ul class="highlights-list">
+          <li *ngFor="let highlight of summary.highlights">{{highlight}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

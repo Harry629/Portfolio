@@ -1,0 +1,35 @@
+<app-navbar [activeSection]="activeSection" (scrollToSection)="scrollToSection($event)"></app-navbar>
+
+
+<main class="main-content">
+
+  <section id="summarise" class="section">
+    <app-summarise></app-summarise>
+  </section>
+
+
+  <section id="about" class="section">
+    <app-about (scrollToSection)="scrollToSection($event)"></app-about>
+  </section>
+
+
+  <section id="experience" class="section">
+    <app-experience></app-experience>
+  </section>
+
+  
+  <section id="projects" class="section">
+    <app-projects></app-projects>
+  </section>
+
+  
+
+  <section id="contact" class="section">
+    <app-contact></app-contact>
+  </section>
+</main>
+
+
+<button class="scroll-top" *ngIf="showScrollTop" (click)="scrollToTop()" title="Scroll to top">
+  <span>↑</span>
+</button>

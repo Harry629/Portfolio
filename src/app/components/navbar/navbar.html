@@ -1,0 +1,28 @@
+<nav class="navbar" [class.dark-theme]="themeService.isDark()" [class.light-theme]="!themeService.isDark()">
+  <div class="navbar-container">
+    <div class="navbar-brand">
+      <span>H</span>
+    </div>
+    
+    <div class="navbar-right">
+      <ul class="navbar-nav">
+        <li *ngFor="let item of navItems" class="nav-item"
+          [ngClass]="{'summarise-item': item.id === 'summarise'}"> 
+          <a href="#" 
+             (click)="onNavClick(item.id); $event.preventDefault()" 
+             [class.active]="activeSection === item.id"
+             class="nav-link">
+            {{item.label}}
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="navbar-actions">
+      <button class="theme-toggle" (click)="toggleTheme()" title="Toggle Theme">
+        <span *ngIf="themeService.isDark()">☀️</span>
+        <span *ngIf="!themeService.isDark()">🌙</span>
+      </button>
+    </div>
+  </div>
+</nav>

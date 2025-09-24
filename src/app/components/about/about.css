@@ -91,11 +91,14 @@
   max-width: 400px;
   border-radius: 20px;
   box-shadow: 0 10px 30px var(--shadow);
-  transition: transform 0.3s ease;
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  mix-blend-mode: multiply;
 }
 
 .profile-image:hover {
   transform: scale(1.03);
+  opacity: 1;
 }
 
 .btn {

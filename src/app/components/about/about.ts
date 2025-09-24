@@ -16,7 +16,7 @@ export class AboutComponent {
     title: 'Full Stack Developer',
     description: 'Passionate developer with expertise in modern web technologies. I love creating innovative solutions and learning new technologies.',
     skills: ['JavaScript', 'Angular', 'Node.js', 'Java', 'SpringBoot', 'MongoDB', 'MySQL'],
-    image: 'https://via.placeholder.com/300x300?text=Your+Photo'
+    image: 'image.jpg'
   };
 
   onScrollToSection(sectionId: string) {
